@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nesibe Aydın Gruplandırma</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110301203-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-110301203-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/immutable@3.8.2/dist/immutable.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="controls">
+        <h1>Nesibe Aydın Gruplandırma</h1>
+        <button type="button" id="recomputeButton">Çalıştır</button>
+        <table>
+            <tr>
+                <th>Grup Sayısı</th>
+                <td class="sliderLabel" id="groupsLabel"}>0</td>
+                <td>
+                    <input id="groupsSlider" type="range" min="1" max="50" step="1" value="24"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Grup Başına Kişi Sayısı</th>
+                <td class="sliderLabel" id="ofSizeLabel"}>0</td>
+                <td>
+                    <input id="ofSizeSlider" type="range" min="2" max="15" step="1" value="5"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Round Sayısı</th>
+                <td class="sliderLabel" id="forRoundsLabel"}>0</td>
+                <td>
+                    <input id="forRoundsSlider" type="range" min="1" max="20" step="1" value="3"/>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <div>
+                <strong>Katılımcılar</strong>
+            </div>
+            <div>
+                <textarea id="playerNames" rows="21">
+Öğrenci 1
+Öğrenci 2
+Öğrenci 3
+Öğrenci 4
+Öğrenci 5
+Öğrenci 6
+Öğrenci 7
+Öğrenci 8
+Öğrenci 9
+Öğrenci 10
+Öğrenci 11
+Öğrenci 12
+Öğrenci 13
+Öğrenci 14
+Öğrenci 15
+Öğrenci 16
+Öğrenci 17
+Öğrenci 18
+Öğrenci 19
+Öğrenci 20
+Öğrenci 21
+Öğrenci 22
+Öğrenci 23
+Öğrenci 24
+Öğrenci 25
+Öğrenci 26
+Öğrenci 27
+Öğrenci 28
+Öğrenci 29
+Öğrenci 30
+Öğrenci 31
+Öğrenci 32
+Öğrenci 33
+Öğrenci 34
+Öğrenci 35
+Öğrenci 36
+Öğrenci 37
+Öğrenci 38
+Öğrenci 39
+Öğrenci 40
+Öğrenci 41
+Öğrenci 42
+Öğrenci 43
+Öğrenci 44
+Öğrenci 45
+Öğrenci 46
+Öğrenci 47
+Öğrenci 48
+Öğrenci 49
+Öğrenci 50
+Öğrenci 51
+Öğrenci 52
+Öğrenci 53
+Öğrenci 54
+Öğrenci 55
+Öğrenci 56
+Öğrenci 57
+Öğrenci 58
+Öğrenci 59
+Öğrenci 60
+Öğrenci 61
+Öğrenci 62
+Öğrenci 63
+Öğrenci 64
+Öğrenci 65
+Öğrenci 66
+Öğrenci 67
+Öğrenci 68
+Öğrenci 69
+Öğrenci 70
+Öğrenci 71
+Öğrenci 72
+Öğrenci 73
+Öğrenci 74
+Öğrenci 75
+Öğrenci 76
+Öğrenci 77
+Öğrenci 78
+Öğrenci 79
+Öğrenci 80
+Öğrenci 81
+Öğrenci 82
+Öğrenci 83
+Öğrenci 84
+Öğrenci 85
+Öğrenci 86
+Öğrenci 87
+Öğrenci 88
+Öğrenci 89
+Öğrenci 90
+Öğrenci 91
+Öğrenci 92
+Öğrenci 93
+Öğrenci 94
+Öğrenci 95
+Öğrenci 96
+Öğrenci 97
+Öğrenci 98
+Öğrenci 99
+Öğrenci 100
+Öğrenci 101
+Öğrenci 102
+Öğrenci 103
+Öğrenci 104
+Öğrenci 105
+Öğrenci 106
+Öğrenci 107
+Öğrenci 108
+Öğrenci 109
+Öğrenci 110
+Öğrenci 111
+Öğrenci 112
+Öğrenci 113
+Öğrenci 114
+Öğrenci 115
+Öğrenci 116
+Öğrenci 117
+Öğrenci 118
+Öğrenci 119
+Öğrenci 120
+</textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <strong>Bu kişiler hiçbir zaman bir araya gelmesinler.</strong>
+            </div>
+            <div>
+                <textarea id="forbiddenPairs" rows="6">
+</textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <strong>Bu kişiler bir araya getirilmesine önem verilsin.</strong>
+            </div>
+            <div>
+                <textarea id="discouragedGroups" rows="6">
+</textarea>
+            </div>
+        </div>
+        <p>
+            <a href="http://salehsultan.com">Saleh Sultan</a> & Umut Eren Özen, 2022
+        </p>
+    </div>
+    <div id="results">
+
+    </div>
+</body>
+</html>
